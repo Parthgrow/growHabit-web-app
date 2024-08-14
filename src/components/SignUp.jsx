@@ -2,6 +2,13 @@ import React from "react";
 import NewNavbar from "./NewNavbar";
 import { useState } from "react";
 
+
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import {app} from "../firebase"
+
+const auth = getAuth(app); 
+
+
 function SignUp() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -12,9 +19,19 @@ function SignUp() {
         e.preventDefault();
         // Call API or perform sign up logic here
         console.log('Sign up form submitted!');
-        alert(" You have signed up"); 
         location.reload(); 
   };
+
+  const signupUser = ()=>{
+
+    createUserWithEmailAndPassword(auth, email, password).then(
+      (value)=> alert("Sucees")
+    ); 
+
+
+  }
+  
+
   return (
     <>
 
@@ -89,13 +106,14 @@ function SignUp() {
               />
             </div>
           </div>
-          <button
+          <button onClick={signupUser}
             className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
             type="submit"
           >
             Sign Up
           </button>
         </form>
+        
       </div>
     </>
   );

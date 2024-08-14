@@ -9,16 +9,9 @@ import {app} from "../firebase"
 const db = getDatabase(app); 
 
 
-
-
-
-
-
-
 function NewNavbar() {
 
     const navigate = useNavigate(); 
-
     const putData = ()=>{
         set(ref(db,'users/Parth'),{
           id : 1, 
@@ -27,6 +20,8 @@ function NewNavbar() {
         }); 
         console.log("I am clicked"); 
     }; 
+
+    
 
   return (
     <>
@@ -51,7 +46,8 @@ function NewNavbar() {
             <p className='mr-5 hover:text-white' onClick={()=> navigate('/about')} > About </p>
 
             <a href="#" className='mr-5 hover:text-white' onClick={()=> navigate('/join')}> Join </a>
-            <button className='mr-5  hover:text-white' onClick={putData}> PutData </button>
+            <button className='mr-5  hover:text-blue-800' onClick={putData}> PutData </button>
+            
         </nav>
 
 
