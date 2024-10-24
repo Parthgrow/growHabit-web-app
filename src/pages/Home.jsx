@@ -29,13 +29,12 @@ function Home() {
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 ">
             {/* <img className="object-cover object-center rounded" alt="hero" src=""/> */}
-            <h1 className="text-7xl"> Better Mental Health For More People </h1>
+            <h1 className="text-7xl"> Better State of Mind For More People </h1>
           </div>
         </div>
       </section>
-      <section >
+      <section>
         <div className="h-screen flex flex-col justify-center items-center bg-gray-100">
-          
           <div className="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24">
             <h2 className="text-2xl font-bold leading-tight text-gray-900 mb-4">
               How it Works

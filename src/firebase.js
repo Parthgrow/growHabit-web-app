@@ -1,5 +1,7 @@
+
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import firebase from "firebase/compat/app";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBEWSUL8OenGi_jwoQmT5DyAYy_1Vll34o",
@@ -12,5 +14,9 @@ const firebaseConfig = {
     databaseURL: "https://growhabitwebsite-default-rtdb.firebaseio.com/"
   };
 
-  export const app = initializeApp(firebaseConfig);
-  export const analytics = getAnalytics(app);
+ 
+
+
+export const app = initializeApp(firebaseConfig) ; 
+export const auth = getAuth(app); 
+
